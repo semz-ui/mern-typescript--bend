@@ -3,7 +3,7 @@ const { getTasks, postTask } = require("../controller/taskController");
 
 const router = express.Router();
 
-const { protect } = require("../authMiddleWare/authMiddleWare");
+const { protect } = require("../middleWare/authMiddleWare");
 
 router.get("/", protect, getTasks);
 router.post("/", protect, postTask);
